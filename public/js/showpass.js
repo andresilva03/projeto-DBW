@@ -1,3 +1,4 @@
+'use strict'
 const pass_field = document.querySelector('.password');
 const show_btn = document.querySelector('.show');
 
