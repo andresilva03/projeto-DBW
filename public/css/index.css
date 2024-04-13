@@ -45,9 +45,13 @@ li a{
     font-weight: 300 ;
 }
 
-li a:hover{
+
+
+li >a:hover{
     border-bottom: 2px solid white;
 }
+
+
 
 li button{
     width: 100px;
