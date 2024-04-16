@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('../imagens/ringue.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.container{
+    margin-top: 40px;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobileapp{
+    height:475px;
+    width:250px;
+}
+
+.apps{
+    display: block;
+    background-image: url('../imagens/base-mobileapp.jpg');
+    color:white;
+    font-family: 'Poppins',sans-serif;
+    text-align: center;
+    padding: 20px 75px;
+    border-radius: 5px;
+    letter-spacing: 5px;
+}
+
+.apps img{
+    margin-right: 20px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 20px;
+    margin-right: 100px;
+    color:white;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.redessoc{
+    text-align: right;
+}
+
+.redessoc i{
+    margin-right: 8px;
+}
+
+
+

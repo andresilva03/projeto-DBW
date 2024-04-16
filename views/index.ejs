@@ -4,24 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/index.css">
     <script src="https://kit.fontawesome.com/466acf7aec.js" crossorigin="anonymous"></script>
 </head>
 <body>
-        <header>
-            <nav class="nav">
-                    <div class="logo">
-                        <img src="/imagens/logotipo.png" class="logo-img">
-                        <a href="#">MMA CLUB</a>
-                    </div>
-                    <ul>
-                        <li><a href="/Aboutus">About us</a></li>
-                        <li><a href="/MobileApp">Mobile App</a></li>
-                        <li><a href="/Contacts">Contacts</a></li>
-                        <li><button value="Login"><a href="/Login">Login</a></button></li>
-                    </ul>
-            </nav>
-        </header>
+        <%- include('./partials/header.ejs') %>
 
         <h1 class="titulo">TRAIN WITH US<br><span class="vermelho">UNLEASH YOUR POTENTIAL!</span></h1>
 
@@ -39,8 +27,15 @@
     </div>
     <div class="container3">
         <img src="/imagens/mma treino.jpg">
-        <h1>LEARN ABOUT MMA</h1>
-        <p>MMA is a combat spectacle that blends various martial arts, such as boxing, jiu-jitsu, and Muay Thai. Inside the octagon, fighters showcase skills and strategies in pursuit of victory. Beyond competition, MMA embodies mutual respect, diversity, and a passion for martial arts. It is an expression of courage and discipline, where fighters strive to overcome physical and mental limits.</p>
+        <aside class="textoprinc">
+            <h3>LEARN ABOUT MMA</h3>
+            <p>MMA is a combat spectacle that blends various martial arts, 
+                such as boxing, jiu-jitsu, and Muay Thai. Inside the octagon, 
+                fighters showcase skills and strategies in pursuit of victory. 
+                Beyond competition, MMA embodies mutual respect, diversity, 
+                and a passion for martial arts. It is an expression of courage and discipline,
+                 where fighters strive to overcome physical and mental limits.</p>
+        </aside>
     </div>
     <footer>
         <h2>

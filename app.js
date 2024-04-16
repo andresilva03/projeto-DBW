@@ -18,3 +18,8 @@ app.get('/login',(req,res) =>{
 app.get('/',(req,res) =>{
     res.render('index')
 });
+
+
+app.get('/MobileAPP',(req,res) =>{
+    res.render('MobileAPP')
+});
