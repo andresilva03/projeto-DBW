@@ -1,0 +1,85 @@
+.background_image {
+    position: fixed;
+    top: 10px; 
+    bottom:30px; 
+    left: 0;
+    right: 0;
+    z-index: -1; /* Para garantir que fique atrás de todos os outros elementos */
+    background: url('../imagens/cage.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    /*opacity: 0.5;*/
+}
+
+
+.rectangle-up,
+.rectangle-mid,
+.rectangle-bot {
+    position: fixed;
+    padding: 20px;
+    width: 40%; 
+    background: black; 
+    text-align: justify;
+    font-weight: bold;
+    color: white;
+    height: 200px; 
+    opacity: 0.8;
+    right: 20%;
+}
+
+.rectangle-up p,
+.rectangle-mid p,
+.rectangle-bot p {
+    font-size: 20px; 
+}
+
+.rectangle-up h1,
+.rectangle-mid h1,
+.rectangle-bot h1 {
+    font-size: 30px; 
+    color: rgb(173, 216, 230);;
+    text-align: left;
+    text-decoration: overline underline wavy  rgb(173, 216, 230);
+}
+
+
+.rectangle-up {
+    top: 160px;
+}
+
+.rectangle-mid {
+    top: 380px;
+}
+
+.rectangle-bot {
+    top: 600px;
+}
+
+.image1 {
+    position: fixed;
+    top: 24%; /* Posiciona a imagem no centro vertical */
+    left: 30%; /* Posiciona a imagem no centro horizontal */
+    transform: translate(-50%, -50%); /* Centraliza a imagem */
+    z-index: 1; /* Coloca a imagem acima do background */
+    max-width: 25%; 
+    max-height: 25%; 
+}
+
+.image2 {
+    position: fixed;
+    top: 50%; /* Posiciona a imagem no centro vertical */
+    left: 30%; /* Posiciona a imagem no centro horizontal */
+    transform: translate(-50%, -50%); /* Centraliza a imagem */
+    z-index: 1; /* Coloca a imagem acima do background */
+    max-width: 25%; 
+    max-height: 25%;
+}
+
+.image3 {
+    position: fixed;
+    top: 76%; /* Posiciona a imagem no centro vertical */
+    left: 30%; /* Posiciona a imagem no centro horizontal */
+    transform: translate(-50%, -50%); /* Centraliza a imagem */
+    z-index: 1; /* Coloca a imagem acima do background */
+    max-width: 25%; 
+    max-height: 25%; 
+}

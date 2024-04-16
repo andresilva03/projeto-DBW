@@ -1,0 +1,93 @@
+
+
+
+.background_image {
+    position: fixed;
+    top: 50px; 
+    bottom:30px; 
+    left: 0;
+    right: 0;
+    z-index: -1; /* Para garantir que fique atrás de todos os outros elementos */
+    background: url('../imagens/background-aboutus.png') no-repeat center center fixed;
+    background-size: cover;
+    /*opacity: 0.5;*/
+}
+
+.rectangle {
+    position: fixed;
+    top: 100px; /* altura do header */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #CC4646;
+    padding: 20px;
+    width: calc(100% - 40px); /* Subtrai a largura do padding */
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.rectangle-left,
+.rectangle-center,
+.rectangle-right {
+    position: fixed;
+    top: 250px; /* Ajuste conforme necessário para colocá-los na posição correta */
+    padding: 20px;
+    width: 32%; 
+    text-align: justify;
+    font-weight: bold;
+    color: rgb(245, 177, 177);
+    height: 600px; 
+}
+
+.rectangle-left p,
+.rectangle-center p,
+.rectangle-right p {
+    font-size: 20px; 
+}
+
+.rectangle-left h1,
+.rectangle-center h1,
+.rectangle-right h1 {
+    font-size: 26px; 
+    text-align: center;
+    text-decoration: underline;
+}
+
+.rectangle-left {
+    background-image: url('../imagens/logo2.jpg');
+    background-size: cover; /* Ajuste a imagem para cobrir todo o retângulo */
+    background-position: center; /* Centralize a imagem */
+    
+}
+
+
+.rectangle-center {
+    background-image: url('../imagens/logo3.jpg');
+    background-size: cover; /* Ajuste a imagem para cobrir todo o retângulo */
+    background-position: center; /* Centralize a imagem */
+    
+}
+
+
+.rectangle-right {
+    background-image: url('../imagens/logo4.jpg');
+    background-size: cover; /* Ajuste a imagem para cobrir todo o retângulo */
+    background-position: center; /* Centralize a imagem */
+    
+}
+
+.rectangle-left {
+    left: 17%;
+    transform: translateX(-50%);
+}
+
+.rectangle-center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.rectangle-right {
+    left: 83%;
+    transform: translateX(-50%);
+}
+
+
