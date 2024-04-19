@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/css/Signup.css">
+    <script src="https://kit.fontawesome.com/466acf7aec.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="background_image">
+        <nav class="nav">
+            <img src="/imagens/logotipo.png" class="logo"></img>
+            <a href="/">MMA CLUB</a>
+        </nav>
+        <div class="container">
+            <div class="header-form">
+                <img src="/imagens/avatar.png">
+                <header>Sign Up</header>
+            </div>
+            <form action="/login" method="post">
+                <div class="field">
+                    <span class="fa fa-user"></span>
+                    <input type="text" placeholder="Username" id="Username" name="Username">
+                </div>
+                <div class="field space">
+                    <span class="fa-solid fa-envelope"></span>
+                    <input type="text" placeholder="Email" id="Email" name="Email">
+                </div>
+                <div class="field space">
+                    <span class="fa fa-lock"></span>
+                    <input type="password" class="password" placeholder="Password" id="Password" name="Password">
+                    <span class="show" onclick="">SHOW</span>
+                </div>
+                <div class="field submit">
+                    <input type="submit" value="Register Now" id="Register">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="/js/showpass.js"></script>
+</body>
+</html>

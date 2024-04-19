@@ -171,4 +171,5 @@ input[type="submit"]:hover{
 
 .signup a:hover{
     text-decoration: underline;
+    color:#BF0000;
 }
