@@ -1,16 +1,17 @@
 const express = require('express');
 
 const app = express();
-const PORT = 3000 || process.env.PORT;
+const PORT = 3000;
 const connectDB = require('./server/config_db/db');
 var path = require('path');
+const methodOverride = require("method-override");
 
 
 //Passport
 const passport = require("passport");
 const localStrategy = require("passport-local");
 const session = require("express-session");
-const user = require("./server/models/Users");
+const User = require("./server/models/Users");
 const { METHODS } = require('http');
 
 //express session
@@ -28,11 +29,11 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-passport.use(new localStrategy(user.authenticate()));
+passport.use(new localStrategy(User.authenticate()));
 
-passport.serializeUser(user.serializeUser());
+passport.serializeUser(User.serializeUser());
 
-passport.deserializeUser(user.deserializeUser());
+passport.deserializeUser(User.deserializeUser());
 //conectar a bd
 connectDB();
 
@@ -43,11 +44,7 @@ app.set('view engine','ejs');
 app.use(express.static(path.join(__dirname,'public')));
 
 
-app.get('/login',(req,res) =>{
-    res.render('login')
-});
-
-app.get('/',(req,res) =>{
+app.get('/main',(req,res) =>{
     res.render('index')
 });
 
@@ -56,15 +53,12 @@ app.get('/MobileAPP',(req,res) =>{
     res.render('MobileAPP')
 });
 
-app.get('/Signup',(req,res) =>{
-    res.render('Signup')
-});
-
-app.post('/login',(req,res) =>{
-    res.render('login')
-});
+// Routes
+const userRouter = require("./routes/UserRoute");
 
 
+//Middleware para os gets e posts
+app.use(userRouter);
 
 
 app.listen(PORT, ()=>{
