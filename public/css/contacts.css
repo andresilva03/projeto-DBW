@@ -1,0 +1,110 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.container{
+  padding: 25px 450px;
+}
+
+.contactos{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+.contactos .telefone img{
+  height: 40px;
+}
+
+.email1 p{
+  margin-top: 20px;
+}
+
+.email1 i{
+  font-size: 40px;
+  color:black;
+}
+
+.morada1 img{
+  height: 40px;
+}
+.morada1 p{
+  margin-top: 15px;
+}
+
+.contact-us{
+  margin-top: 20px;
+  position:relative;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%);
+  text-align: center;
+  width: 100%;
+  text-align: center;
+  padding: 30px 100px;
+  background:rgb(255, 111, 111);
+  box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.field{
+  margin-top: 10px;
+  position: relative;
+  height: 45px;
+  width: 100%;
+  display: flex;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.field input{
+  padding: 0 20px;
+  height: 100%;
+  width: 100%;
+  background: transparent ;
+  border:none;
+  outline:none;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 5px;
+}
+
+.field-textarea{
+  margin-top: 10px;
+  position: relative;
+  height: 110px;
+  width: 100%;
+  display: flex;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.field-textarea textarea{
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 5px;
+  padding: 10px 20px;
+  height: 100%;
+  width: 100%;
+  background: transparent ;
+  overflow: visible;
+}
+
+input[type="submit"]{
+  background: #BF0000;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor:pointer;
+  font-family: 'Montserrat',sans-serif;
+}
+
+
+input[type="submit"]:hover{
+  background: #BF0000;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/contacts.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <script src="https://kit.fontawesome.com/466acf7aec.js" crossorigin="anonymous"></script>
+    <title>Contacts</title>
+</head>
+<body>
+  <%- include('./partials/header.ejs') %>
+  <div class="container">
+    <div class="contactos">
+      <div class="telefone">
+        <img src="\imagens\telefone.svg">
+        <p>291 500 600</p>
+        <p>+351 920 000 000</p>
+      </div>
+      <div class="email1">
+        <i class="fa-regular fa-envelope"></i>
+        <p>mmaclub@gmail.com</p>
+      </div>
+      <div class="morada1">
+        <img src="\imagens\localização.png">
+        <p>St. saint Andrew</p>
+      </div>
+    </div>
+    <div class="contact-us">
+      <h1> CONTACT US </h1>
+      <form action="/contacts" method="post">
+        <div class="field">
+          <input type="text" placeholder="Enter your name" id="name" name="name">
+        </div>
+        <div class="field">
+          <input type="text" placeholder="Enter a valid email adress" id="email" name="email">
+        </div>
+        <div class="field-textarea">
+          <textarea id="duvida" name="duvida"></textarea>
+        </div>
+        <div class="field">
+          <input type="submit" value="SUBMIT">
+        </div>
+      </form>
+      <p> <%= resposta %> </p>
+    </div>
+  </div>
+  <%- include('./partials/footer.ejs') %>
+</body>
+</html>

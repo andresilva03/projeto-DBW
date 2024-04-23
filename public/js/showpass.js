@@ -1,8 +1,9 @@
-'use strict'
+"use strict"
+
 const pass_field = document.querySelector('.password');
 const show_btn = document.querySelector('.show');
 
-show_btn.onclick=function(){
+show_btn.onclick = function(){
     if(pass_field.type === "password"){
         pass_field.type = "text";
     }else{

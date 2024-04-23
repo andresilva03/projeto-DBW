@@ -12,7 +12,7 @@ router.get('/',userCont.loginGet);
 router.post('/',
     passport.authenticate("local",{failureRedirect: '/'}), 
     function (req, res) {
-        res.redirect('/main');
+        res.redirect('/index');
     }
 );
 

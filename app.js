@@ -1,10 +1,11 @@
 const express = require('express');
-
 const app = express();
 const PORT = 3000;
 const connectDB = require('./server/config_db/db');
 var path = require('path');
 const methodOverride = require("method-override");
+
+
 
 
 //Passport
@@ -44,7 +45,7 @@ app.set('view engine','ejs');
 app.use(express.static(path.join(__dirname,'public')));
 
 
-app.get('/main',(req,res) =>{
+app.get('/index',(req,res) =>{
     res.render('index')
 });
 
@@ -55,10 +56,12 @@ app.get('/MobileAPP',(req,res) =>{
 
 // Routes
 const userRouter = require("./routes/UserRoute");
+const ContactsRouter = require("./routes/ContactsRoute");
 
 
 //Middleware para os gets e posts
 app.use(userRouter);
+app.use('/contacts', ContactsRouter );
 
 
 app.listen(PORT, ()=>{
