@@ -12,7 +12,7 @@
 <body>
   <%- include('./partials/header.ejs') %>
   <div class="container">
-    <div class="contactos">
+    <aside class="contactos">
       <div class="telefone">
         <img src="\imagens\telefone.svg">
         <p>291 500 600</p>
@@ -26,24 +26,27 @@
         <img src="\imagens\localização.png">
         <p>St. saint Andrew</p>
       </div>
-    </div>
+    </aside>
     <div class="contact-us">
-      <h1> CONTACT US </h1>
+      <h1> Virtual Assistant</h1>
+      <div class="assistant">
+        <span class="fa-solid fa-headset"></span>
+          <p class="respostaIa"><% if (resposta) { %>
+            <%= resposta %>
+            <% } %>
+          </p>
+      </div>
       <form action="/contacts" method="post">
-        <div class="field">
-          <input type="text" placeholder="Enter your name" id="name" name="name">
-        </div>
-        <div class="field">
-          <input type="text" placeholder="Enter a valid email adress" id="email" name="email">
-        </div>
-        <div class="field-textarea">
-          <textarea id="duvida" name="duvida"></textarea>
-        </div>
-        <div class="field">
-          <input type="submit" value="SUBMIT">
+        <div class="mensagem-input">
+          <div class="field-text">
+            <input type="textarea" id="duvida" name="duvida">
+          </div>
+          <div class="field-submit">
+            <input type="submit" value="SUBMIT">
+          </div>
         </div>
       </form>
-      <p> <%= resposta %> </p>
+      
     </div>
   </div>
   <%- include('./partials/footer.ejs') %>

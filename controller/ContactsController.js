@@ -1,9 +1,10 @@
+const { response } = require('express');
 const { OpenAI } = require('openai');
 
-const openai = new OpenAI({ apiKey:'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'});
+const openai = new OpenAI({ apiKey:'sk-proj-AHRJWtCfE4hMbHrxK9WMT3BlbkFJUuYCZ8h5ZdPHx2pdyq2S'});
 
 const ContactsGet = function (req, res) {
-    res.render('contacts')
+    res.render('contacts',{resposta: null})
 }
 
 const ContactsPost = async function(req,res) {
@@ -22,12 +23,12 @@ const ContactsPost = async function(req,res) {
         const completion = await openai.chat.completions.create({
             messages: [{ role: "system", content: mensagem }],
             model: "gpt-3.5-turbo", max_tokens: 500,temperature:1,
-        });
-        
-        const respostaIa = completion.choices[0];
-
-        res.render('contacts', { resposta: respostaIa });
-        console.log(respostaIa);
+        })
+        .then((completion) => {
+            const respostaIa = completion.choices[0].message.content;
+            res.render('contacts',{resposta : respostaIa});
+            console.log(respostaIa);
+        })
 
     } catch (error) {
         console.log(error);
